@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  brand: MyString
+  model: MyString
+  mileage: 1
+  color: MyString
+  startprize: 1
+  buyoutprize: 1
+  duration: 2013-10-08 14:33:19
+  description: MyString
+
+two:
+  title: MyString
+  brand: MyString
+  model: MyString
+  mileage: 1
+  color: MyString
+  startprize: 1
+  buyoutprize: 1
+  duration: 2013-10-08 14:33:19
+  description: MyString
