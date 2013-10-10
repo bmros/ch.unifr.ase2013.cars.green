@@ -45,5 +45,35 @@
   <%= @car.description %>
 </p>
 
+
+
+<h2>current bid:</h2>
+
+<% if @car.bids.blank? %>
+    <p>No bid yet</p>
+<% else %>
+    <%= render @car.bids.last %>
+<% end %>
+
+
+
+
+<h2>Add a bid:</h2>
+<%= form_for([@car, @car.bids.build]) do |f| %>
+    <p>
+      <%= f.label :bidder %><br />
+      <%= f.text_field :bidder %>
+    </p>
+    <p>
+      <%= f.label :amount %><br />
+      <%= f.text_field :amount %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
+
+
+
 <%= link_to 'Edit', edit_car_path(@car) %> |
 <%= link_to 'Back', cars_path %>

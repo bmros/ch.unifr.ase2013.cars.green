@@ -7,5 +7,6 @@ class CreateBids < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :bids, :car_id
   end
 end

@@ -24,17 +24,13 @@ class BidsController < ApplicationController
   # POST /bids
   # POST /bids.json
   def create
-    @bid = Bid.new(bid_params)
 
-    respond_to do |format|
-      if @bid.save
-        format.html { redirect_to @bid, notice: 'Bid was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @bid }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @bid.errors, status: :unprocessable_entity }
-      end
-    end
+    @car = Car.find(params[:car_id])
+    @bid = @car.bids.create(params[:bid].permit(:bidder, :amount))
+    redirect_to car_path(@car)
+    #@bid = Bid.new(bid_params)
+
+
   end
 
   # PATCH/PUT /bids/1

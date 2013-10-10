@@ -8,7 +8,7 @@ class CreateCars < ActiveRecord::Migration
       t.string :color
       t.integer :startprize
       t.integer :buyoutprize
-      t.time :duration
+      t.datetime :duration
       t.string :description
 
       t.timestamps
