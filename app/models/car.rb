@@ -6,5 +6,14 @@ class Car < ActiveRecord::Base
   validates :model, length: { minimum: 2 }
   validates :color, length: { minimum: 2 }
   validates :startprize, numericality: true
-  validates :buyoutprize, numericality: true
+
+
+  def check_highest_bid
+    highest_bid = self.bids.order("amount DESC").first.amount rescue 0
+    self.startprize = highest_bid
+    save
+  end
+
+
+
 end
