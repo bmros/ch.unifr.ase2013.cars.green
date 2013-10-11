@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e94a4ec-c18d-4ff3-a6d0-d50092b68601" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-    </list>
+    <list default="true" id="4e94a4ec-c18d-4ff3-a6d0-d50092b68601" name="Default" comment="" />
     <ignored path="ch.unifr.ase2013.cars.green.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="4e94a4ec-c18d-4ff3-a6d0-d50092b68601" time="1381490029141" ignored="false" />
