@@ -15,8 +15,8 @@ Cars::Application.routes.draw do
   get '/signout', :to => 'sessions#destroy'
   
   #root 'sessions#new'
-  
-  
+
+  root to: "cars#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
