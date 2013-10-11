@@ -29,6 +29,7 @@ td {
  border-bottom: solid 1px #444;
  font-size: 16px;
  text-align:center;
+ height: 50px;
 }
 
 td.show {

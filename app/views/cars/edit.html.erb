@@ -1,8 +1,11 @@
-<h1>Editing car</h1>
+<h2>Editing car</h2>
 <hr />
 
+<% if session[:current_user_id] == nil %>
+<%= render 'layouts/error' %>
+<% else %>
 <%= render 'form' %>
-
+<% end %>	
 <hr />
 <h2>
 <%= link_to 'Show', @car %> |

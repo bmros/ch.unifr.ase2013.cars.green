@@ -1,6 +1,10 @@
-<h1>Editing bid</h1>
+<h2>Editing bid</h2>
 
+<% if session[:current_user_id] == nil %>
+<%= render 'layouts/error' %>
+<% else %>
 <%= render 'form' %>
+<% end %>	
 
 <%= link_to 'Show', @bid %> |
 <%= link_to 'Back', bids_path %>

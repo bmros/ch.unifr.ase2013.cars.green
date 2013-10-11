@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+
+<% if session[:current_user_id] == nil %>
+<%= render 'layouts/error' %>
+<% else %>
+
+
 <p>
   <strong>Bidder:</strong>
   <%= @bid.bidder %>
@@ -16,4 +22,9 @@
 </p>
 
 <%= link_to 'Edit', edit_bid_path(@bid) %> |
+
+<% end %>	
+
 <%= link_to 'Back', bids_path %>
+
+

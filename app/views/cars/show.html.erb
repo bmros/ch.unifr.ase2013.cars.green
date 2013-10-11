@@ -62,6 +62,13 @@
 <% if DateTime.now > @car.duration %>
     <h2>Auction expired</h2>
 <% else %>
+
+<% if session[:current_user_id] == nil %>
+<%= render 'layouts/error' %>
+<% else %>
+		
+
+
     <h2>Add a bid:</h2>
     <%= form_for([@car, @car.bids.build]) do |f| %>
         <p>
@@ -76,5 +83,8 @@
           <%= f.submit %>
         </p>
     <% end %>
+	
+<% end %>	
+	
 <% end %>
 
