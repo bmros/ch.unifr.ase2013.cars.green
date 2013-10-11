@@ -32,7 +32,11 @@
 
 <p>
   <strong>Duration:</strong>
-  <%= @car.duration %>
+  <% if DateTime.now > @car.duration %>
+    expired
+<% else %>
+    <%= @car.duration %>
+<% end %>
 </p>
 
 <p>
@@ -50,24 +54,24 @@
     <%= render @car.bids.last %>
 <% end %>
 
-
-
-
-<h2>Add a bid:</h2>
-<%= form_for([@car, @car.bids.build]) do |f| %>
-    <p>
-      <%= f.label :bidder %><br />
-      <%= f.text_field :bidder %>
-    </p>
-    <p>
-      <%= f.label :amount %><br />
-      <%= f.text_field :amount %>
-    </p>
-    <p>
-      <%= f.submit %>
-    </p>
+<% if DateTime.now > @car.duration %>
+    <h2>Auction expired</h2>
+<% else %>
+    <h2>Add a bid:</h2>
+    <%= form_for([@car, @car.bids.build]) do |f| %>
+        <p>
+          <%= f.label :bidder %><br />
+          <%= f.text_field :bidder %>
+        </p>
+        <p>
+          <%= f.label :amount %><br />
+          <%= f.text_field :amount %>
+        </p>
+        <p>
+          <%= f.submit %>
+        </p>
+    <% end %>
 <% end %>
-
 
 
 <%= link_to 'Edit', edit_car_path(@car) %> |

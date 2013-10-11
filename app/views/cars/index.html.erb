@@ -19,6 +19,8 @@
 
   <tbody>
     <% @cars.each do |car| %>
+
+
       <tr>
         <td><%= car.title %></td>
         <td><%= car.brand %></td>
@@ -26,7 +28,12 @@
         <td><%= car.mileage %></td>
         <td><%= car.color %></td>
         <td><%= car.startprize %></td>
+        <% if DateTime.now > car.duration %>
+            <td>expired</td>
+        <% else %>
+
         <td><%= car.duration %></td>
+        <% end %>
         <td><%= car.description %></td>
         <td><%= link_to 'Show', car %></td>
         <td><%= link_to 'Edit', edit_car_path(car) %></td>

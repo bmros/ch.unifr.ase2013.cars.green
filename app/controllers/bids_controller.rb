@@ -26,9 +26,16 @@ class BidsController < ApplicationController
   def create
 
     @car = Car.find(params[:car_id])
-    @bid = @car.bids.create(params[:bid].permit(:bidder, :amount))
-    redirect_to car_path(@car)
-    #@bid = Bid.new(bid_params)
+
+    if DateTime.now > @car.duration
+      @bid = @car.bids.create(params[:bid].permit(:bidder, :amount))
+      redirect_to car_path(@car)
+      #@bid = Bid.new(bid_params)
+    else
+      redirect_to car_path(@car)
+    end
+
+
 
 
   end
