@@ -1,5 +1,10 @@
 <h1>Listing cars</h1>
 
+<<<<<<< HEAD
+<hr />
+
+=======
+>>>>>>> 1863f9aa536fe5a8fe8c5d021e67d1b99b51e50a
 <table>
   <thead>
     <tr>
@@ -11,9 +16,15 @@
       <th>Current Bid</th>
       <th>Duration</th>
       <th>Description</th>
+<<<<<<< HEAD
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Destroy</th>
+=======
       <th></th>
       <th></th>
       <th></th>
+>>>>>>> 1863f9aa536fe5a8fe8c5d021e67d1b99b51e50a
     </tr>
   </thead>
 
@@ -35,14 +46,37 @@
         <td><%= car.duration %></td>
         <% end %>
         <td><%= car.description %></td>
+<<<<<<< HEAD
+
+<% if session[:current_user_id] == car.creator %>
+ <td><%= link_to 'Show', car %></td>
+ <td><%= link_to 'Edit', edit_car_path(car) %></td>
+ <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% else %>
+ <td><%= link_to 'Show', car %></td>
+ <td>-</td>
+ <td>-</td>
+<% end %>		
+		
+		
+		
+		
+=======
         <td><%= link_to 'Show', car %></td>
         <td><%= link_to 'Edit', edit_car_path(car) %></td>
         <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+>>>>>>> 1863f9aa536fe5a8fe8c5d021e67d1b99b51e50a
       </tr>
     <% end %>
   </tbody>
 </table>
 
+<<<<<<< HEAD
+ <h2><%= link_to "Add a new car", new_car_path %><h2>
+ <h2><%= link_to "Home", root_path %><h2>
+
+=======
 <br>
 
 <%= link_to 'New Car', new_car_path %>
+>>>>>>> 1863f9aa536fe5a8fe8c5d021e67d1b99b51e50a
