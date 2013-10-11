@@ -1,24 +1,23 @@
+<h2>User profil page</h2>
 <p id="notice"><%= notice %></p>
 
-<p>
+<% if session[:current_user_id] == nil %>
+<%= render 'layouts/error' %>
+<% else %>
+
+
+
+
+<h2>
   <strong>Name:</strong>
   <%= @user.name %>
-</p>
+</h2>
 
-<p>
+<h2>
   <strong>Email:</strong>
   <%= @user.email %>
-</p>
+</h2>
 
-<p>
-  <strong>Password:</strong>
-  <%= @user.password %>
-</p>
+<h2><%= link_to 'Edit', edit_user_path(@user) %><h2>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
-<<<<<<< HEAD
-
-<%= link_to 'To Car', cars_path %>
-=======
->>>>>>> 1863f9aa536fe5a8fe8c5d021e67d1b99b51e50a
+<% end %>	

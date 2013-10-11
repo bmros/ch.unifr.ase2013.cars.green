@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Cars::Application.config.secret_key_base = 'cee614820aeab097e14b059f07b065874827b916c9cdd59c08e281970ccd1d5e44105ef3bd86cf53e41a4820e9b04fdc14b8b4dbb70c549d131789ae4a6e7998'
+Cars::Application.config.secret_key_base = '1a41c3abc550a370f66c22d147be0beee1bb75cc0b064a8cd8b0d3cfa1f4a47b1e494f599853f2d40cd515d12e1fb7d88dba85bdd982648f785f3c177aec2968'

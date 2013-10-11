@@ -1,6 +1,13 @@
-<h1>Editing user</h1>
+<h2>Editing user</h2>
 
+
+<% if session[:current_user_id] == nil %>
+<%= render 'layouts/error' %>
+<% else %>
 <%= render 'form' %>
+<% end %>		
+
+
 
 <%= link_to 'Show', @user %> |
 <%= link_to 'Back', users_path %>

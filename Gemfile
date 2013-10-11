@@ -3,15 +3,11 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-
 #In development we use mysql
-group :development do
-  gem 'sqlite3'
-end
+gem 'sqlite3-ruby', :group => :development
+
 #In production (heroku) PostgreSQL
-group :production do
-  gem 'pg'
-end
+gem 'pg', :group => :production
 
 
 # Use SCSS for stylesheets

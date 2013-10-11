@@ -1,17 +1,19 @@
-<h1>Identification</h1>
-
 <%= form_for(:session, :url => sessions_path) do |f| %>
   <div class="field">
-    <%= f.label :email, "eMail" %><br />
+    <%= f.label :email, "eMail" %>
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :password, "Mot de passe" %><br />
+    <%= f.label :password, "Password" %>
     <%= f.password_field :password %>
   </div>
   <div class="actions">
-    <%= f.submit "S'identifier" %>
+    <%= f.submit "Enter the application" %>
   </div>
 <% end %>
 
-<p>Pas encore inscrit ? <%= link_to "S'inscrire !", signup_path %></p>
+<h2>
+<%= link_to "I Want an account", signup_path %>
+or
+<%= link_to "I Just want to visit", cars_path %>
+</h2>

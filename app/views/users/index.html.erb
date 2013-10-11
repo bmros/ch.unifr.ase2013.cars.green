@@ -1,14 +1,18 @@
-<h1>Listing users</h1>
+<h2>Listing users</h2>
+
+<% if session[:current_user_id] == nil %>
+<%= render 'layouts/error' %>
+<% else %>
+
 
 <table>
   <thead>
     <tr>
       <th>Name</th>
       <th>Email</th>
-      <th>Password</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Destroy</th>
     </tr>
   </thead>
 
@@ -17,10 +21,18 @@
       <tr>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
-        <td><%= user.password %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		
+<% if session[:current_user_id] == user.id %>
+ <td class="show"><%= link_to 'Show', user %></td>
+ <td><%= link_to 'Edit', edit_user_path(user) %></td>
+ <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% else %>
+ <td>-</td>
+ <td>-</td>
+ <td>-</td>
+<% end %>		
+		
+		
       </tr>
     <% end %>
   </tbody>
@@ -28,8 +40,6 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
-<<<<<<< HEAD
+<h2><%= link_to 'New User', new_user_path %><h2>
 
-=======
->>>>>>> 1863f9aa536fe5a8fe8c5d021e67d1b99b51e50a
+<% end %>	

@@ -18,7 +18,7 @@ class BidsControllerTest < ActionController::TestCase
 
   test "should create bid" do
     assert_difference('Bid.count') do
-      post :create, bid: { amount: @bid.amount, bidder: @bid.bidder, car_id: @bid.car_id }
+      post :create, bid: { amount: @bid.amount, bidder: @bid.bidder, car_id: @bid.car_id, user_id: @bid.user_id }
     end
 
     assert_redirected_to bid_path(assigns(:bid))
@@ -35,7 +35,7 @@ class BidsControllerTest < ActionController::TestCase
   end
 
   test "should update bid" do
-    patch :update, id: @bid, bid: { amount: @bid.amount, bidder: @bid.bidder, car_id: @bid.car_id }
+    patch :update, id: @bid, bid: { amount: @bid.amount, bidder: @bid.bidder, car_id: @bid.car_id, user_id: @bid.user_id }
     assert_redirected_to bid_path(assigns(:bid))
   end
 

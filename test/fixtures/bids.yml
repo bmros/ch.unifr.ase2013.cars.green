@@ -4,8 +4,10 @@ one:
   bidder: MyString
   amount: 1
   car_id: 
+  user_id: 
 
 two:
   bidder: MyString
   amount: 1
   car_id: 
+  user_id: 

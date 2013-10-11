@@ -1,15 +1,11 @@
-<h1>New car</h1>
+<h2>New car</h2>
 
-<<<<<<< HEAD
-<hr />
 
+<% if session[:current_user_id] == nil %>
+<%= render 'layouts/error' %>
+<% else %>
 <%= render 'form' %>
+<% end %>		
 
-<%= link_to 'Back', cars_path %>
-<%= link_to 'Home', root_path %>
 
-=======
-<%= render 'form' %>
 
-<%= link_to 'Back', cars_path %>
->>>>>>> 1863f9aa536fe5a8fe8c5d021e67d1b99b51e50a

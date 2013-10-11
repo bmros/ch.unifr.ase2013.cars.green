@@ -12,37 +12,43 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
+    <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :brand %><br>
+    <%= f.label :brand %>
     <%= f.text_field :brand %>
   </div>
   <div class="field">
-    <%= f.label :model %><br>
+    <%= f.label :model %>
     <%= f.text_field :model %>
   </div>
   <div class="field">
-    <%= f.label :mileage %><br>
+    <%= f.label :mileage %>
     <%= f.number_field :mileage %>
   </div>
   <div class="field">
-    <%= f.label :color %><br>
+    <%= f.label :color %>
     <%= f.text_field :color %>
   </div>
   <div class="field">
-    <%= f.label :startprize %><br>
+    <%= f.label :startprize %>
     <%= f.number_field :startprize %>
   </div>
   <div class="field">
-    <%= f.label :duration %><br>
-    <%= f.datetime_select :duration %>
-  </div>
+    <%= f.label :duration %>
+    <%= f.datetime_select :duration,{ :order => [:day, :month, :year, :hour,:minute], :start_year => Time.now.year }, {:class => 'date-select'}%>  </div>
+  
+
+  
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label :description %>
     <%= f.text_field :description %>
   </div>
+  
+  <%= f.hidden_field :creator, :value => session[:current_user_id] %>
+  
+  
   <div class="actions">
     <%= f.submit %>
   </div>

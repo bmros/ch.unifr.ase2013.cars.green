@@ -1,17 +1,25 @@
-<<<<<<< HEAD
-* {
- margin: 0px;
- padding: 0px;
-}
+
 
 body{
  margin: 0 auto;
- margin-top: 100px;
+ width: 800px;
+}
+
+h1.header, h4{
+ text-align: center;
+}
+a:visited, a:link, a:active {
+ color: gold;
+}
+a:hover {
+ text-decoration:none;
+ background-color: #fff;
+ color: #444;
 }
 
 
 th {
- //width: 100%;
+ width: 100%;
  border: solid 2px #444;
  padding: 15px;
  font-size: 20px;
@@ -20,57 +28,33 @@ th {
 td {
  border-bottom: solid 1px #444;
  font-size: 16px;
-=======
-body{
- margin: 0 auto;
- width: 800px;
- margin-top: 100px;
+ text-align:center;
 }
 
-p#blog{
- font-size: 40px;
- text-align: center;
+td.show {
+ background-color: #444;
+ font-size: 20px; 
 }
 
-ul.checkmark {
- list-style-type: none;
-}
-
-li.ok { 
- background:url("ok.png") no-repeat 0 50%;
- padding-left: 40px;
- padding-top: 10px;
-}
-li.ko { 
- background:url("ko.png") no-repeat 0 50%;
- padding-left: 40px;
- padding-top: 10px;
+p {
+ font-size: 20px;
+ padding: 10px;
 }
 
 
-
-.pretty  {
- margin-top: 100px;
- margin: 0 auto;
- width: 100%;
+input[type=submit] {
+ color:#fff;
+ padding: 10px;
+ background-color:#444;
+ cursor:pointer;
+ border: solid 1px #444;
+}
+input[type=submit]:hover {
+ color: gold;
 }
 
-
-.pretty th .current {
-  padding: 20px;
-  padding-right: 40px;
-  background-repeat: no-repeat;
-  background-position: right center;
-}
-.pretty th .asc { 
-  background-image: url(arrow-up.png);
-  	background-repeat:no-repeat;
-	background-position:right center;
-}
-
-.pretty th .desc { 
-  background-image: url(arrow-down.png);
-  	background-repeat:no-repeat;
-	background-position:right center;
->>>>>>> 1863f9aa536fe5a8fe8c5d021e67d1b99b51e50a
+select.date-select {
+ width:auto;
+ border: 1px solid #cccccc;
+ background-color: #ffffff;
 }

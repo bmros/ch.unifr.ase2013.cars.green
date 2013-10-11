@@ -8,8 +8,9 @@ one:
   color: MyString
   startprize: 1
   buyoutprize: 1
-  duration: 2013-10-08 14:33:19
+  duration: 2013-10-11 11:51:34
   description: MyString
+  user_id: 
 
 two:
   title: MyString
@@ -19,5 +20,6 @@ two:
   color: MyString
   startprize: 1
   buyoutprize: 1
-  duration: 2013-10-08 14:33:19
+  duration: 2013-10-11 11:51:34
   description: MyString
+  user_id: 
